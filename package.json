@@ -3,20 +3,33 @@
   "version": "1.0.0",
   "description": "Auto generate unit test using GPT",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "writeTest": "node src/ex.js",
-    "test": "mocha src/unitTestSuie.js"
+    "build": "tsc",
+    "start": "tsc && node dist/index.js",
+    "dev:ts": "tsc --watch",
+    "dev:js": "nodemon dist/index.js",
+    "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
+    "prod": "node dist/index.js"
   },
   "keywords": [
     "chatGPT",
     "Unit test",
-    "mocha",
+    "Jest",
     "AI"
   ],
   "author": "amrsa",
   "license": "ISC",
   "dependencies": {
-    "mocha": "^10.2.0",
-    "openai": "^3.2.1"
+    "dotenv": "^16.3.1",
+    "improved-logging": "^2.1.10",
+    "jest": "^29.6.1",
+    "openai": "^3.2.1",
+    "ora": "^6.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "chalk": "4.1.2",
+    "typescript": "^5.1.6"
   }
 }

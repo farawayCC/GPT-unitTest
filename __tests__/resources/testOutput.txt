@@ -1,0 +1,7 @@
+Here is a unit test using Jest for the given functions:
+
+```javascript
+// JS file with functions to be tested
+```
+
+This test covers all the functions from the `dummyFunc.js` file and includes relevant assertions.
